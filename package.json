@@ -1,0 +1,19 @@
+{
+  "scrips": {
+    "publish": "npm run clean && npm run install && npm run build && npm run prune && npm run deploy",
+    "clean": "git clean -fxd",
+    "install": "npm install",
+    "prune": "npm prune --production",
+    "build": "./node_modules/.bin/grunt",
+    "deploy": "./node_modules/.bin/haikro create build deploy --heroku-token `heroku auth:token`"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-sass": "^0.8.1"
+  },
+  "dependencies": {
+    "express": "^4.10.2",
+    "haikro": "^1.5.2"
+  }
+}
