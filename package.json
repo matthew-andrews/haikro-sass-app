@@ -1,8 +1,7 @@
 {
-  "scrips": {
-    "publish": "npm run clean && npm run install && npm run build && npm run prune && npm run deploy",
+  "scripts": {
+    "publish": "npm run clean && npm install && npm run build && npm run prune && npm run deploy",
     "clean": "git clean -fxd",
-    "install": "npm install",
     "prune": "npm prune --production",
     "build": "./node_modules/.bin/grunt",
     "deploy": "./node_modules/.bin/haikro create build deploy --heroku-token `heroku auth:token`"
