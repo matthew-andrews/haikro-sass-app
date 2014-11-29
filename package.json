@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "publish": "npm run clean && npm install && npm run build && npm run prune && npm run deploy",
     "clean": "git clean -fxd",
